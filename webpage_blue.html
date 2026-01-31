@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Subhashree Communication - Award-Winning Advertising Agency</title>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Crimson+Pro:wght@400;600;700&family=DM+Sans:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<style>
+			:root {
+				--primary: #1e3a5f;
+				--accent: #2b76bb;
+				--accent-secondary: #5ca4d8;
+				--text-dark: #0f0f0f;
+				--text-light: #ffffff;
+				--bg-light: #f5f8fc;
+				--bg-card: #ffffff;
+				--border: #d5e3f0;
+			}
+
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			body {
+				font-family: "DM Sans", sans-serif;
+				color: var(--text-dark);
+				line-height: 1.7;
+				overflow-x: hidden;
+			}
+
+			/* Navigation */
+			nav {
+				position: fixed;
+				top: 0;
+				left: 0;
+				right: 0;
+				background: rgba(30, 58, 95, 0.95);
+				backdrop-filter: blur(15px);
+				padding: 1.2rem 5%;
+				z-index: 1000;
+				border-bottom: 1px solid rgba(43, 118, 187, 0.3);
+				animation: slideDown 0.6s ease-out;
+			}
+
+			@keyframes slideDown {
+				from {
+					transform: translateY(-100%);
+					opacity: 0;
+				}
+				to {
+					transform: translateY(0);
+					opacity: 1;
+				}
+			}
+
+			.nav-container {
+				max-width: 1400px;
+				margin: 0 auto;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+
+			.logo {
+				display: flex;
+				align-items: center;
+				gap: 1rem;
+			}
+
+			.logo img {
+				height: 50px;
+				width: auto;
+			}
+
+			.logo-text {
+				font-family: "Bebas Neue", sans-serif;
+				font-size: 1.6rem;
+				color: var(--text-light);
+				letter-spacing: 2px;
+			}
+
+			.logo-text span {
+				color: var(--accent-secondary);
+			}
+
+			.nav-links {
+				display: flex;
+				gap: 2.5rem;
+				list-style: none;
+			}
+
+			.nav-links a {
+				color: var(--text-light);
+				text-decoration: none;
+				font-weight: 500;
+				font-size: 0.95rem;
+				transition: color 0.3s ease;
+				position: relative;
+			}
+
+			.nav-links a::after {
+				content: "";
+				position: absolute;
+				bottom: -5px;
+				left: 0;
+				width: 0;
+				height: 2px;
+				background: var(--accent);
+				transition: width 0.3s ease;
+			}
+
+			.nav-links a:hover {
+				color: var(--accent);
+			}
+
+			.nav-links a:hover::after {
+				width: 100%;
+			}
+
+			.nav-contact {
+				display: flex;
+				gap: 1rem;
+				align-items: center;
+			}
+
+			.contact-badge {
+				padding: 0.5rem 1.2rem;
+				background: var(--accent-secondary);
+				color: var(--text-light);
+				border-radius: 25px;
+				font-size: 0.85rem;
+				font-weight: 600;
+				text-decoration: none;
+				transition: transform 0.3s ease, box-shadow 0.3s ease;
+			}
+
+			.contact-badge:hover {
+				transform: translateY(-2px);
+				box-shadow: 0 5px 15px rgba(43, 118, 187, 0.4);
+			}
+
+			/* Hero Section */
+			.hero {
+				min-height: 100vh;
+				background: linear-gradient(135deg, #1e3a5f 0%, #2b5a8a 100%);
+				padding: 8rem 5% 4rem;
+				position: relative;
+				overflow: hidden;
+				display: flex;
+				align-items: center;
+			}
+
+			.hero::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				background: radial-gradient(
+						circle at 20% 30%,
+						rgba(43, 118, 187, 0.2) 0%,
+						transparent 50%
+					),
+					radial-gradient(
+						circle at 80% 70%,
+						rgba(92, 164, 216, 0.15) 0%,
+						transparent 50%
+					);
+				animation: pulseGlow 8s ease-in-out infinite;
+			}
+
+			@keyframes pulseGlow {
+				0%,
+				100% {
+					opacity: 0.6;
+				}
+				50% {
+					opacity: 1;
+				}
+			}
+
+			.hero-pattern {
+				position: absolute;
+				inset: 0;
+				background-image: repeating-linear-gradient(
+					0deg,
+					transparent,
+					transparent 2px,
+					rgba(43, 118, 187, 0.03) 2px,
+					rgba(43, 118, 187, 0.03) 4px
+				);
+				opacity: 0.5;
+			}
+
+			.hero-content {
+				max-width: 1400px;
+				margin: 0 auto;
+				position: relative;
+				z-index: 2;
+			}
+
+			.hero-badge {
+				display: inline-flex;
+				align-items: center;
+				gap: 0.5rem;
+				padding: 0.7rem 1.5rem;
+				background: rgba(43, 118, 187, 0.2);
+				border: 1px solid rgba(92, 164, 216, 0.4);
+				border-radius: 30px;
+				color: var(--accent-secondary);
+				font-size: 0.9rem;
+				font-weight: 600;
+				margin-bottom: 2rem;
+				animation: fadeInUp 0.8s ease-out;
+			}
+
+			@keyframes fadeInUp {
+				from {
+					opacity: 0;
+					transform: translateY(30px);
+				}
+				to {
+					opacity: 1;
+					transform: translateY(0);
+				}
+			}
+
+			.hero h1 {
+				font-family: "Bebas Neue", sans-serif;
+				font-size: 5.5rem;
+				line-height: 1;
+				color: var(--text-light);
+				margin-bottom: 1.5rem;
+				letter-spacing: 3px;
+				animation: fadeInUp 0.8s ease-out 0.2s both;
+			}
+
+			.hero h1 .highlight {
+				color: var(--accent);
+				display: block;
+				font-size: 6rem;
+			}
+
+			.hero-tagline {
+				font-family: "Crimson Pro", serif;
+				font-size: 2rem;
+				font-style: italic;
+				color: rgba(255, 255, 255, 0.9);
+				margin-bottom: 2rem;
+				animation: fadeInUp 0.8s ease-out 0.4s both;
+			}
+
+			.hero-philosophy {
+				display: flex;
+				gap: 2rem;
+				margin-bottom: 3rem;
+				animation: fadeInUp 0.8s ease-out 0.6s both;
+			}
+
+			.philosophy-item {
+				font-family: "Bebas Neue", sans-serif;
+				font-size: 1.5rem;
+				letter-spacing: 2px;
+				color: var(--text-light);
+				padding: 0.8rem 1.5rem;
+				background: rgba(43, 118, 187, 0.15);
+				border-left: 3px solid var(--accent-secondary);
+			}
+
+			.hero-cta {
+				display: flex;
+				gap: 1.5rem;
+				animation: fadeInUp 0.8s ease-out 0.8s both;
+			}
+
+			.btn {
+				padding: 1.2rem 2.5rem;
+				font-size: 1rem;
+				font-weight: 600;
+				border: none;
+				border-radius: 6px;
+				cursor: pointer;
+				transition: all 0.3s ease;
+				text-decoration: none;
+				display: inline-block;
+			}
+
+			.btn-primary {
+				background: linear-gradient(
+					135deg,
+					var(--accent) 0%,
+					var(--accent-secondary) 100%
+				);
+				color: var(--text-light);
+				box-shadow: 0 10px 30px rgba(43, 118, 187, 0.3);
+			}
+
+			.btn-primary:hover {
+				transform: translateY(-3px);
+				box-shadow: 0 15px 40px rgba(43, 118, 187, 0.5);
+			}
+
+			.btn-secondary {
+				background: transparent;
+				color: var(--text-light);
+				border: 2px solid var(--accent-secondary);
+			}
+
+			.btn-secondary:hover {
+				background: rgba(43, 118, 187, 0.15);
+				transform: translateY(-3px);
+			}
+
+			.hero-contact {
+				margin-top: 3rem;
+				padding-top: 2rem;
+				border-top: 1px solid rgba(255, 255, 255, 0.1);
+				animation: fadeInUp 0.8s ease-out 1s both;
+			}
+
+			.contact-label {
+				font-size: 0.85rem;
+				color: rgba(255, 255, 255, 0.6);
+				margin-bottom: 0.8rem;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+			}
+
+			.contact-info {
+				display: flex;
+				gap: 2rem;
+				flex-wrap: wrap;
+			}
+
+			.contact-item {
+				display: flex;
+				align-items: center;
+				gap: 0.7rem;
+				color: var(--text-light);
+				font-size: 1.1rem;
+				font-weight: 500;
+			}
+
+			.contact-item a {
+				color: var(--accent);
+				text-decoration: none;
+				transition: opacity 0.3s ease;
+			}
+
+			.contact-item a:hover {
+				opacity: 0.8;
+			}
+
+			/* About Section */
+			.about {
+				padding: 8rem 5%;
+				background: var(--bg-light);
+			}
+
+			.section-container {
+				max-width: 1400px;
+				margin: 0 auto;
+			}
+
+			.section-header {
+				text-align: center;
+				margin-bottom: 5rem;
+			}
+
+			.section-label {
+				display: inline-block;
+				font-family: "Bebas Neue", sans-serif;
+				font-size: 1rem;
+				letter-spacing: 3px;
+				color: var(--accent);
+				margin-bottom: 1rem;
+				text-transform: uppercase;
+			}
+
+			.section-title {
+				font-family: "Bebas Neue", sans-serif;
+				font-size: 4rem;
+				line-height: 1.1;
+				color: var(--text-dark);
+				margin-bottom: 1.5rem;
+				letter-spacing: 2px;
+			}
+
+			.section-description {
+				font-size: 1.2rem;
+				color: #666;
+				max-width: 800px;
+				margin: 0 auto;
+				line-height: 1.8;
+			}
+
+			.about-grid {
+				display: grid;
+				grid-template-columns: repeat(2, 1fr);
+				gap: 4rem;
+				margin-top: 4rem;
+			}
+
+			.about-card {
+				background: var(--bg-card);
+				padding: 3rem;
+				border-radius: 12px;
+				box-shadow: 0 5px 30px rgba(0, 0, 0, 0.08);
+				position: relative;
+				overflow: hidden;
+				transition: transform 0.3s ease, box-shadow 0.3s ease;
+			}
+
+			.about-card::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 4px;
+				background: linear-gradient(
+					90deg,
+					var(--accent),
+					var(--accent-secondary)
+				);
+				transform: scaleX(0);
+				transform-origin: left;
+				transition: transform 0.5s ease;
+			}
+
+			.about-card:hover {
+				transform: translateY(-8px);
+				box-shadow: 0 15px 50px rgba(0, 0, 0, 0.12);
+			}
+
+			.about-card:hover::before {
+				transform: scaleX(1);
+			}
+
+			.about-card h3 {
+				font-family: "Bebas Neue", sans-serif;
+				font-size: 2rem;
+				letter-spacing: 1px;
+				color: var(--text-dark);
+				margin-bottom: 1.5rem;
+			}
+
+			.about-card p {
+				font-size: 1.05rem;
+				line-height: 1.8;
+				color: #555;
+			}
+
+			/* Services Section */
+			.services {
+				padding: 8rem 5%;
+				background: var(--primary);
+				position: relative;
+				overflow: hidden;
+			}
+
+			.services::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 50%;
+				height: 100%;
+				background: radial-gradient(
+					circle at center,
+					rgba(43, 118, 187, 0.15) 0%,
+					transparent 70%
+				);
+			}
+
+			.services .section-container {
+				position: relative;
+				z-index: 2;
+			}
+
+			.services .section-label {
+				color: var(--accent);
+			}
+
+			.services .section-title {
+				color: var(--text-light);
+			}
+
+			.services .section-description {
+				color: rgba(255, 255, 255, 0.8);
+			}
+
+			.services-categories {
+				margin-top: 5rem;
+			}
+
+			.service-category {
+				margin-bottom: 5rem;
+			}
+
+			.category-header {
+				display: flex;
+				align-items: center;
+				gap: 1.5rem;
+				margin-bottom: 2.5rem;
+			}
+
+			.category-icon {
+				width: 60px;
+				height: 60px;
+				background: linear-gradient(
+					135deg,
+					var(--accent) 0%,
+					var(--accent-secondary) 100%
+				);
+				border-radius: 10px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 2rem;
+				box-shadow: 0 5px 20px rgba(43, 118, 187, 0.35);
+			}
+
+			.category-title {
+				font-family: "Bebas Neue", sans-serif;
+				font-size: 2.5rem;
+				letter-spacing: 2px;
+				color: var(--text-light);
+			}
+
+			.service-items {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+				gap: 2rem;
+			}
+
+			.service-item {
+				background: rgba(255, 255, 255, 0.05);
+				padding: 2rem;
+				border-radius: 8px;
+				border: 1px solid rgba(43, 118, 187, 0.25);
+				transition: all 0.3s ease;
+			}
+
+			.service-item:hover {
+				background: rgba(255, 255, 255, 0.08);
+				border-color: var(--accent-secondary);
+				transform: translateX(5px);
+			}
+
+			.service-item h4 {
+				font-family: "DM Sans", sans-serif;
+				font-size: 1.2rem;
+				font-weight: 600;
+				color: var(--text-light);
+				margin-bottom: 0.8rem;
+			}
+
+			.service-item p {
+				font-size: 0.95rem;
+				color: rgba(255, 255, 255, 0.7);
+				line-height: 1.7;
+			}
+
+			.service-list {
+				list-style: none;
+				margin-top: 1rem;
+			}
+
+			.service-list li {
+				padding: 0.5rem 0;
+				padding-left: 1.5rem;
+				color: rgba(255, 255, 255, 0.8);
+				position: relative;
+				font-size: 0.95rem;
+			}
+
+			.service-list li::before {
+				content: "▸";
+				position: absolute;
+				left: 0;
+				color: var(--accent-secondary);
+			}
+
+			/* Clients Section */
+			.clients {
+				padding: 6rem 5%;
+				background: var(--bg-light);
+			}
+
+			.clients .section-title {
+				text-align: center;
+				margin-bottom: 3rem;
+			}
+
+			.client-logos {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+				gap: 3rem;
+				max-width: 1200px;
+				margin: 0 auto;
+				align-items: center;
+			}
+
+			.client-logo {
+				background: var(--bg-card);
+				padding: 2rem;
+				border-radius: 12px;
+				display: flex;
+				align-items: center;
+				text-align: center;
+				justify-content: center;
+				height: 120px;
+				box-shadow: 0 3px 15px rgba(0, 0, 0, 0.05);
+				transition: all 0.3s ease;
+				font-family: "Bebas Neue", sans-serif;
+				font-size: 1.8rem;
+				letter-spacing: 2px;
+				color: var(--text-dark);
+			}
+
+			.client-logo:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+			}
+
+			/* Awards Section */
+			.awards {
+				padding: 6rem 5%;
+				background: linear-gradient(135deg, #1e3a5f 0%, #2b5a8a 100%);
+			}
+
+			.awards .section-label,
+			.awards .section-title,
+			.awards .section-description {
+				color: var(--text-light);
+			}
+
+			.awards .section-description {
+				opacity: 0.9;
+			}
+
+			.awards-display {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				gap: 3rem;
+				margin-top: 4rem;
+				flex-wrap: wrap;
+			}
+
+			.award-item {
+				text-align: center;
+			}
+
+			.award-icon {
+				font-size: 5rem;
+				margin-bottom: 1rem;
+				animation: float 3s ease-in-out infinite;
+			}
+
+			@keyframes float {
+				0%,
+				100% {
+					transform: translateY(0);
+				}
+				50% {
+					transform: translateY(-10px);
+				}
+			}
+
+			.award-text {
+				font-family: "Bebas Neue", sans-serif;
+				font-size: 1.5rem;
+				letter-spacing: 1px;
+				color: var(--accent-secondary);
+			}
+
+			/* Contact Section */
+			.contact {
+				padding: 8rem 5%;
+				background: var(--bg-light);
+			}
+
+			.contact-grid {
+				display: grid;
+				grid-template-columns: 1fr 1.2fr;
+				gap: 5rem;
+				max-width: 1400px;
+				margin: 4rem auto 0;
+			}
+
+			.contact-details {
+				background: var(--primary);
+				padding: 4rem 3rem;
+				border-radius: 16px;
+				color: var(--text-light);
+			}
+
+			.contact-details h3 {
+				font-family: "Bebas Neue", sans-serif;
+				font-size: 2.5rem;
+				letter-spacing: 2px;
+				margin-bottom: 2rem;
+				color: var(--accent-secondary);
+			}
+
+			.detail-item {
+				margin-bottom: 2.5rem;
+			}
+
+			.detail-label {
+				font-size: 0.85rem;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				color: rgba(255, 255, 255, 0.6);
+				margin-bottom: 0.8rem;
+			}
+
+			.detail-content {
+				font-size: 1.15rem;
+				line-height: 1.8;
+				color: var(--text-light);
+			}
+
+			.detail-content a {
+				color: var(--accent);
+				text-decoration: none;
+				transition: opacity 0.3s ease;
+			}
+
+			.detail-content a:hover {
+				opacity: 0.8;
+			}
+
+			.commitment-quote {
+				margin-top: 3rem;
+				padding: 2rem;
+				background: rgba(43, 118, 187, 0.15);
+				border-left: 4px solid var(--accent-secondary);
+				font-style: italic;
+				font-size: 1.05rem;
+				line-height: 1.8;
+				color: rgba(255, 255, 255, 0.9);
+			}
+
+			.contact-form {
+				background: var(--bg-card);
+				padding: 4rem 3rem;
+				border-radius: 16px;
+				box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+			}
+
+			.form-group {
+				margin-bottom: 1.8rem;
+			}
+
+			.form-group label {
+				display: block;
+				font-weight: 600;
+				margin-bottom: 0.7rem;
+				color: var(--text-dark);
+			}
+
+			.form-group input,
+			.form-group textarea {
+				width: 100%;
+				padding: 1rem 1.2rem;
+				border: 2px solid var(--border);
+				border-radius: 8px;
+				font-family: "DM Sans", sans-serif;
+				font-size: 1rem;
+				transition: border-color 0.3s ease;
+			}
+
+			.form-group input:focus,
+			.form-group textarea:focus {
+				outline: none;
+				border-color: var(--accent);
+			}
+
+			.form-group textarea {
+				resize: vertical;
+				min-height: 140px;
+			}
+
+			.submit-btn {
+				width: 100%;
+				padding: 1.3rem;
+				background: linear-gradient(
+					135deg,
+					var(--accent),
+					var(--accent-secondary)
+				);
+				color: var(--text-light);
+				border: none;
+				border-radius: 8px;
+				font-size: 1.1rem;
+				font-weight: 700;
+				cursor: pointer;
+				transition: all 0.3s ease;
+				box-shadow: 0 5px 20px rgba(43, 118, 187, 0.35);
+			}
+
+			.submit-btn:hover {
+				transform: translateY(-2px);
+				box-shadow: 0 8px 30px rgba(43, 118, 187, 0.5);
+			}
+
+			/* Footer */
+			footer {
+				background: var(--primary);
+				padding: 3rem 5%;
+				text-align: center;
+				color: rgba(255, 255, 255, 0.7);
+			}
+
+			.footer-logo {
+				font-family: "Bebas Neue", sans-serif;
+				font-size: 2rem;
+				letter-spacing: 2px;
+				color: var(--accent-secondary);
+				margin-bottom: 1rem;
+			}
+
+			.footer-text {
+				font-size: 0.95rem;
+				line-height: 1.8;
+			}
+
+			/* Mobile Menu */
+			.mobile-menu-btn {
+				display: none;
+				background: none;
+				border: none;
+				color: var(--text-light);
+				font-size: 1.8rem;
+				cursor: pointer;
+			}
+
+			/* Responsive */
+			@media (max-width: 1024px) {
+				.nav-links {
+					display: none;
+				}
+
+				.mobile-menu-btn {
+					display: block;
+				}
+
+				.hero h1 {
+					font-size: 4rem;
+				}
+
+				.hero h1 .highlight {
+					font-size: 4.5rem;
+				}
+
+				.hero-philosophy {
+					flex-direction: column;
+					gap: 1rem;
+				}
+
+				.about-grid {
+					grid-template-columns: 1fr;
+					gap: 2rem;
+				}
+
+				.contact-grid {
+					grid-template-columns: 1fr;
+					gap: 3rem;
+				}
+			}
+
+			@media (max-width: 768px) {
+				.hero {
+					padding: 6rem 5% 3rem;
+				}
+
+				.hero h1 {
+					font-size: 3rem;
+				}
+
+				.hero h1 .highlight {
+					font-size: 3.5rem;
+				}
+
+				.hero-tagline {
+					font-size: 1.5rem;
+				}
+
+				.section-title {
+					font-size: 3rem;
+				}
+
+				.hero-cta {
+					flex-direction: column;
+				}
+
+				.contact-info {
+					flex-direction: column;
+					gap: 1rem;
+				}
+
+				.service-items {
+					grid-template-columns: 1fr;
+				}
+
+				.client-logos {
+					grid-template-columns: repeat(2, 1fr);
+					gap: 2rem;
+				}
+			}
+
+			@media (max-width: 480px) {
+				.nav-contact {
+					display: none;
+				}
+
+				.hero h1 {
+					font-size: 2.5rem;
+				}
+
+				.hero h1 .highlight {
+					font-size: 3rem;
+				}
+
+				.section-title {
+					font-size: 2.5rem;
+				}
+
+				.client-logos {
+					grid-template-columns: 1fr;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Navigation -->
+		<nav>
+			<div class="nav-container">
+				<div class="logo">
+					<img src="logo.png" alt="Subhashree Communication Logo" />
+					<div class="logo-text">SUBHASHREE <span>COMMUNICATION</span></div>
+				</div>
+				<ul class="nav-links">
+					<li><a href="#home">Home</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#services">Services</a></li>
+					<li><a href="#clients">Clients</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+				<div class="nav-contact">
+					<a href="tel:+919438644669" class="contact-badge">📞 Contact Us</a>
+				</div>
+				<button class="mobile-menu-btn">☰</button>
+			</div>
+		</nav>
+
+		<!-- Hero Section -->
+		<section id="home" class="hero">
+			<div class="hero-pattern"></div>
+			<div class="hero-content">
+				<div class="hero-badge">🏆 Award-Winning Advertising Agency</div>
+				<h1>
+					<span class="highlight">BRANDS</span>
+					THAT CREATE IMPACT
+				</h1>
+				<p class="hero-tagline">
+					"We create market strategy for Brands that create impact"
+				</p>
+
+				<div class="hero-philosophy">
+					<div class="philosophy-item">SIMPLE</div>
+					<div class="philosophy-item">FRESH</div>
+					<div class="philosophy-item">UNIQUE</div>
+				</div>
+
+				<div class="hero-cta">
+					<a href="#services" class="btn btn-primary">Explore Our Services</a>
+					<a href="#contact" class="btn btn-secondary">Get in Touch</a>
+				</div>
+
+				<div class="hero-contact">
+					<div class="contact-label">Quick Contact</div>
+					<div class="contact-info">
+						<div class="contact-item">
+							📞 <a href="tel:+919438644669">+91-943 864 4669</a>
+						</div>
+						<div class="contact-item">
+							📞 <a href="tel:+919861011511">+91-986 101 1511</a>
+						</div>
+						<div class="contact-item">
+							✉️
+							<a href="mailto:subhashreecommunication@gmail.com"
+								>subhashreecommunication@gmail.com</a
+							>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- About Section -->
+		<section id="about" class="about">
+			<div class="section-container">
+				<div class="section-header">
+					<div class="section-label">About Us</div>
+					<h2 class="section-title">AWARD-WINNING EXCELLENCE</h2>
+					<p class="section-description">
+						An award-winning advertising agency based in Bhubaneswar, Odisha,
+						managed by qualified personnel using advanced equipment and
+						technology
+					</p>
+				</div>
+
+				<div class="about-grid">
+					<div class="about-card">
+						<h3>Our Mission</h3>
+						<p>
+							Using an integrated communication model to capture "mind share" in
+							consumer psychology and revamp a brand's image. We focus on
+							creating lasting impressions that drive brand success.
+						</p>
+					</div>
+
+					<div class="about-card">
+						<h3>Operational Excellence</h3>
+						<p>
+							In-house computerized designing desk for faster transmission of
+							jobs to meet urgent demands. Our state-of-the-art infrastructure
+							ensures timely delivery without compromising quality.
+						</p>
+					</div>
+
+					<div class="about-card">
+						<h3>Client Commitment</h3>
+						<p>
+							A focus on complete customer satisfaction through negotiated rates
+							and fixed-period contracts. We believe in building long-term
+							partnerships based on trust and transparency.
+						</p>
+					</div>
+
+					<div class="about-card">
+						<h3>Company Profile</h3>
+						<p>
+							Equipped with advanced technology and managed by qualified
+							professionals, we deliver comprehensive advertising solutions that
+							transform businesses and elevate brands.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Services Section -->
+		<section id="services" class="services">
+			<div class="section-container">
+				<div class="section-header">
+					<div class="section-label">Prime Services</div>
+					<h2 class="section-title">COMPREHENSIVE SOLUTIONS</h2>
+					<p class="section-description">
+						Full-spectrum advertising and marketing services designed to amplify
+						your brand presence
+					</p>
+				</div>
+
+				<div class="services-categories">
+					<!-- Offline & Outdoor Advertising -->
+					<div class="service-category">
+						<div class="category-header">
+							<div class="category-icon">📢</div>
+							<h3 class="category-title">Offline & Outdoor Advertising</h3>
+						</div>
+						<div class="service-items">
+							<div class="service-item">
+								<h4>Traditional Media</h4>
+								<ul class="service-list">
+									<li>Newspapers</li>
+									<li>Magazines</li>
+									<li>Television</li>
+									<li>Radio</li>
+								</ul>
+							</div>
+							<div class="service-item">
+								<h4>Outdoor Assets</h4>
+								<ul class="service-list">
+									<li>Hoardings</li>
+									<li>Kiosks</li>
+									<li>Banners</li>
+									<li>Glow Signboards</li>
+									<li>LED Boards</li>
+									<li>Posters</li>
+								</ul>
+							</div>
+							<div class="service-item">
+								<h4>Mobile Branding</h4>
+								<ul class="service-list">
+									<li>Auto-rickshaw Branding</li>
+									<li>Auto Mike Ads</li>
+									<li>Display Vans</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<!-- Digital & Online Marketing -->
+					<div class="service-category">
+						<div class="category-header">
+							<div class="category-icon">💻</div>
+							<h3 class="category-title">Digital & Online Marketing</h3>
+						</div>
+						<div class="service-items">
+							<div class="service-item">
+								<h4>Web & Mobile Development</h4>
+								<p>
+									Custom website and mobile app development tailored to your
+									business needs
+								</p>
+							</div>
+							<div class="service-item">
+								<h4>Google Ad Campaigns</h4>
+								<p>
+									Optimized for all devices with a focus on ROI and measurable
+									results
+								</p>
+							</div>
+							<div class="service-item">
+								<h4>Social Media Management</h4>
+								<p>
+									Strategic daily posting to achieve a 40% increase in profile
+									engagement
+								</p>
+							</div>
+							<div class="service-item">
+								<h4>Website Banner Design</h4>
+								<p>
+									Eye-catching digital banners that drive clicks and conversions
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- Event Management -->
+					<div class="service-category">
+						<div class="category-header">
+							<div class="category-icon">🎉</div>
+							<h3 class="category-title">Event Management</h3>
+						</div>
+						<div class="service-items">
+							<div class="service-item">
+								<h4>Corporate Events</h4>
+								<ul class="service-list">
+									<li>Conferences</li>
+									<li>Corporate Meets</li>
+									<li>Loan Fairs</li>
+									<li>Exhibition Stalls</li>
+								</ul>
+							</div>
+							<div class="service-item">
+								<h4>Public & Talent Events</h4>
+								<ul class="service-list">
+									<li>Street Shows</li>
+									<li>Cricket Matches</li>
+									<li>Talent Search Programs</li>
+									<li>Dance, Song, Drawing, Quiz</li>
+								</ul>
+							</div>
+							<div class="service-item">
+								<h4>Specialized Decor</h4>
+								<ul class="service-list">
+									<li>Balloon Decorations</li>
+									<li>Promotional Tables with Umbrellas</li>
+									<li>Rangoli/Diya for Special Occasions</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<!-- Printing & Designing -->
+					<div class="service-category">
+						<div class="category-header">
+							<div class="category-icon">🎨</div>
+							<h3 class="category-title">Printing & Designing</h3>
+						</div>
+						<div class="service-items">
+							<div class="service-item">
+								<h4>In-House Printing Unit</h4>
+								<ul class="service-list">
+									<li>Letterpress Printing</li>
+									<li>Offset Printing</li>
+									<li>Screen Printing</li>
+								</ul>
+							</div>
+							<div class="service-item">
+								<h4>Marketing Materials</h4>
+								<ul class="service-list">
+									<li>Leaflets</li>
+									<li>Flyers</li>
+									<li>Vinyl Printing</li>
+									<li>Brochures</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Clients Section -->
+		<section id="clients" class="clients">
+			<div class="section-container">
+				<h2 class="section-title">NOTABLE CLIENTS</h2>
+				<div class="client-logos">
+					<div class="client-logo">HDFC BANK</div>
+					<div class="client-logo">TATA POWER</div>
+					<div class="client-logo">TITAN</div>
+					<div class="client-logo">TANISHQ</div>
+					<div class="client-logo">FASTRACK</div>
+					<div class="client-logo">NISSAN</div>
+					<div class="client-logo">YAMAHA</div>
+					<div class="client-logo">ANMOL</div>
+					<div class="client-logo">KFC</div>
+					<div class="client-logo">DOMINOS</div>
+					<div class="client-logo">SOBISCO BISCUIT</div>
+					<div class="client-logo">ESCORT COBUTA</div>
+					<div class="client-logo">SWARAJ</div>
+					<div class="client-logo">MAHINDRA</div>
+					<div class="client-logo">AU FINANCE BANK</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Awards Section -->
+		<section class="awards">
+			<div class="section-container">
+				<div class="section-header">
+					<div class="section-label">Recognition</div>
+					<h2 class="section-title">AWARD-WINNING AGENCY</h2>
+					<p class="section-description">
+						Recognized for excellence in advertising and marketing with multiple
+						industry awards
+					</p>
+				</div>
+				<div class="awards-display">
+					<div class="award-item">
+						<div class="award-icon">🏆</div>
+						<div class="award-text">Industry Awards</div>
+					</div>
+					<div class="award-item">
+						<div class="award-icon">🎖️</div>
+						<div class="award-text">Excellence Certificates</div>
+					</div>
+					<div class="award-item">
+						<div class="award-icon">⭐</div>
+						<div class="award-text">Client Recognition</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Contact Section -->
+		<section id="contact" class="contact">
+			<div class="section-container">
+				<div class="section-header">
+					<div class="section-label">Get in Touch</div>
+					<h2 class="section-title">LET'S CREATE IMPACT TOGETHER</h2>
+				</div>
+
+				<div class="contact-grid">
+					<div class="contact-details">
+						<h3>Contact Information</h3>
+
+						<div class="detail-item">
+							<div class="detail-label">Head Office</div>
+							<div class="detail-content">Bhubaneswar, Odisha, India</div>
+						</div>
+
+						<div class="detail-item">
+							<div class="detail-label">Sales Contacts</div>
+							<div class="detail-content">
+								<a href="tel:+919438644669">+91-943 864 4669</a><br />
+								<a href="tel:+919861011511">+91-986 101 1511</a>
+							</div>
+						</div>
+
+						<div class="detail-item">
+							<div class="detail-label">Email</div>
+							<div class="detail-content">
+								<a href="mailto:subhashreecommunication@gmail.com"
+									>subhashreecommunication@gmail.com</a
+								>
+							</div>
+						</div>
+
+						<div class="commitment-quote">
+							"We shall leave no stone unturned to the entire satisfaction of
+							our immediate & esteemed customers"
+						</div>
+					</div>
+
+					<div class="contact-form">
+						<form>
+							<div class="form-group">
+								<label for="name">Full Name</label>
+								<input type="text" id="name" name="name" required />
+							</div>
+							<div class="form-group">
+								<label for="email">Email Address</label>
+								<input type="email" id="email" name="email" required />
+							</div>
+							<div class="form-group">
+								<label for="phone">Phone Number</label>
+								<input type="tel" id="phone" name="phone" required />
+							</div>
+							<div class="form-group">
+								<label for="message">Your Message</label>
+								<textarea id="message" name="message" required></textarea>
+							</div>
+							<button type="submit" class="submit-btn">Send Message</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer>
+			<div class="footer-logo">SUBHASHREE COMMUNICATION</div>
+			<p class="footer-text">
+				&copy; 2026 Subhashree Communication. All rights reserved. |
+				Bhubaneswar, Odisha, India
+			</p>
+		</footer>
+
+		<script
+			data-cfasync="false"
+			src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
+		></script>
+		<script>
+			// Smooth scrolling
+			document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+				anchor.addEventListener("click", function (e) {
+					e.preventDefault();
+					const target = document.querySelector(this.getAttribute("href"));
+					if (target) {
+						target.scrollIntoView({
+							behavior: "smooth",
+							block: "start",
+						});
+					}
+				});
+			});
+
+			// Form submission
+			document
+				.querySelector(".contact-form form")
+				.addEventListener("submit", function (e) {
+					e.preventDefault();
+					alert("Thank you for your message! We will get back to you soon.");
+				});
+		</script>
+	</body>
+</html>
