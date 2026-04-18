@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Subhashree Communication - Award-Winning Advertising Agency</title>
+		<title>SUBHASHREE COMMUNICATIONS - Award-Winning Advertising Agency</title>
 		<link
 			href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Crimson+Pro:wght@400;600;700&family=DM+Sans:wght@400;500;600;700&display=swap"
 			rel="stylesheet"
@@ -216,6 +216,15 @@
 				z-index: 2;
 			}
 
+			.hero-badges {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 1rem;
+				align-items: center;
+				margin-bottom: 2rem;
+				animation: fadeInUp 0.8s ease-out;
+			}
+
 			.hero-badge {
 				display: inline-flex;
 				align-items: center;
@@ -227,8 +236,52 @@
 				color: var(--accent-secondary);
 				font-size: 0.9rem;
 				font-weight: 600;
-				margin-bottom: 2rem;
-				animation: fadeInUp 0.8s ease-out;
+			}
+
+			.badge-3m {
+				display: inline-flex;
+				align-items: center;
+				gap: 0.75rem;
+				padding: 0.5rem 1.2rem 0.5rem 0.5rem;
+				background: rgba(255, 255, 255, 0.08);
+				border: 1px solid rgba(255, 255, 255, 0.2);
+				border-radius: 30px;
+				backdrop-filter: blur(6px);
+				transition: background 0.3s ease, border-color 0.3s ease;
+			}
+
+			.badge-3m:hover {
+				background: rgba(255, 255, 255, 0.13);
+				border-color: rgba(255, 255, 255, 0.35);
+			}
+
+			.badge-3m-logo {
+				flex-shrink: 0;
+				border-radius: 6px;
+				overflow: hidden;
+				line-height: 0;
+				box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+			}
+
+			.badge-3m-text {
+				display: flex;
+				flex-direction: column;
+				line-height: 1.2;
+			}
+
+			.badge-3m-text .label-top {
+				font-size: 0.65rem;
+				font-weight: 600;
+				text-transform: uppercase;
+				letter-spacing: 1.5px;
+				color: rgba(255, 255, 255, 0.6);
+			}
+
+			.badge-3m-text .label-main {
+				font-size: 0.9rem;
+				font-weight: 700;
+				color: #ffffff;
+				letter-spacing: 0.5px;
 			}
 
 			@keyframes fadeInUp {
@@ -1202,8 +1255,8 @@
 		<nav>
 			<div class="nav-container">
 				<div class="logo">
-					<img src="logo.png" alt="Subhashree Communication Logo" />
-					<div class="logo-text">SUBHASHREE <span>COMMUNICATION</span></div>
+					<img src="logo.png" alt="SUBHASHREE COMMUNICATION Logo" />
+					<div class="logo-text">SUBHASHREE <span>COMMUNICATIONS</span></div>
 				</div>
 				<ul class="nav-links">
 					<li><a href="#home">Home</a></li>
@@ -1244,12 +1297,33 @@
 			<div class="hero-pattern"></div>
 			<div class="hero-content">
 				<div class="hero-badge">🏆 Award-Winning Advertising Agency</div>
+				<div class="badge-3m">
+						<!-- 3M Logo SVG -->
+						<div class="badge-3m-logo">
+							<svg width="48" height="32" viewBox="0 0 48 32" xmlns="http://www.w3.org/2000/svg">
+								<rect width="48" height="32" rx="5" fill="#FF0000"/>
+								<text
+									x="24" y="23"
+									font-family="Arial Black, Arial, sans-serif"
+									font-weight="900"
+									font-size="20"
+									fill="#ffffff"
+									text-anchor="middle"
+									letter-spacing="-0.5"
+								>3M</text>
+							</svg>
+						</div>
+						<div class="badge-3m-text">
+							<span class="label-top">Authorized</span>
+							<span class="label-main">Converter</span>
+						</div>
+				</div>
 				<h1>
 					<span class="highlight">BRANDS</span>
 					THAT CREATE IMPACT
 				</h1>
 				<p class="hero-tagline">
-					"We create market strategy for Brands that create impact"
+					"A Complete Advertising Solution"
 				</p>
 
 				<div class="hero-philosophy">
@@ -1270,7 +1344,7 @@
 							📞 <a href="tel:+919438644669">+91-943 864 4669</a>
 						</div>
 						<div class="contact-item">
-							📞 <a href="tel:+919861011511">+91-986 101 1511</a>
+							📞 <a href="tel:+917682811511">+91-768 281 1511</a>
 						</div>
 						<div class="contact-item">
 							✉️
@@ -1379,6 +1453,7 @@
 									<li>Glow Signboards</li>
 									<li>LED Boards</li>
 									<li>Posters</li>
+									<li>Ballon Advertising</li>
 								</ul>
 							</div>
 							<div class="service-item">
@@ -1399,13 +1474,6 @@
 							<h3 class="category-title">Digital & Online Marketing</h3>
 						</div>
 						<div class="service-items">
-							<div class="service-item">
-								<h4>Web & Mobile Development</h4>
-								<p>
-									Custom website and mobile app development tailored to your
-									business needs
-								</p>
-							</div>
 							<div class="service-item">
 								<h4>Google Ad Campaigns</h4>
 								<p>
@@ -1449,9 +1517,8 @@
 								<h4>Public & Talent Events</h4>
 								<ul class="service-list">
 									<li>Street Shows</li>
-									<li>Cricket Matches</li>
 									<li>Talent Search Programs</li>
-									<li>Dance, Song, Drawing, Quiz</li>
+									<li>Innovative Campaigns</li>
 								</ul>
 							</div>
 							<div class="service-item">
@@ -1459,7 +1526,8 @@
 								<ul class="service-list">
 									<li>Balloon Decorations</li>
 									<li>Promotional Tables with Umbrellas</li>
-									<li>Rangoli/Diya for Special Occasions</li>
+									<li>Product Promotions</li>
+									<li>Market Survey</li>
 								</ul>
 							</div>
 						</div>
@@ -1475,7 +1543,7 @@
 							<div class="service-item">
 								<h4>In-House Printing Unit</h4>
 								<ul class="service-list">
-									<li>Letterpress Printing</li>
+									<li>Digital Printing</li>
 									<li>Offset Printing</li>
 									<li>Screen Printing</li>
 								</ul>
@@ -1483,10 +1551,10 @@
 							<div class="service-item">
 								<h4>Marketing Materials</h4>
 								<ul class="service-list">
-									<li>Leaflets</li>
 									<li>Flyers</li>
-									<li>Vinyl Printing</li>
+									<li>Vinyl and Flex Printing</li>
 									<li>Brochures</li>
+									<li>Corporate Gifts</li>
 								</ul>
 							</div>
 						</div>
@@ -1511,12 +1579,13 @@
 					<div class="client-logo">KFC</div>
 					<div class="client-logo">DOMINOS</div>
 					<div class="client-logo">SOBISCO BISCUIT</div>
-					<div class="client-logo">ESCORT COBUTA</div>
+					<div class="client-logo">ESCORT KUBOTA</div>
 					<div class="client-logo">SWARAJ</div>
 					<div class="client-logo">MAHINDRA</div>
 					<div class="client-logo" style="font-size: 1.7rem">
 						AU SMALL FINANCE BANK
 					</div>
+					<div class="client-logo" >IDFC BANK</div>
 				</div>
 			</div>
 		</section>
@@ -1566,13 +1635,11 @@
 						<div class="slide active">
 							<div class="slide-inner">
 								<img src="images/Promotions_1.png" alt="Xiaomi Event" />
-								<div class="slide-caption">XIAOMI EVENT</div>
 							</div>
 						</div>
 						<div class="slide">
 							<div class="slide-inner">
 								<img src="images/Promotions_2.png" alt="Titan Promotion" />
-								<div class="slide-caption">TITAN PROMOTION</div>
 							</div>
 						</div>
 						<div class="slide">
@@ -1581,7 +1648,6 @@
 									src="images/Promotions_3.png"
 									alt="Restaurant Board Design"
 								/>
-								<div class="slide-caption">RESTAURANT BOARD DESIGN</div>
 							</div>
 						</div>
 						<div class="slide">
@@ -1590,169 +1656,141 @@
 									src="images/Promotions_4.png"
 									alt="HDFC Promotional Event"
 								/>
-								<div class="slide-caption">HDFC PROMOTIONAL EVENT</div>
 							</div>
 						</div>
 						<div class="slide">
 							<div class="slide-inner">
 								<img src="images/Promotions_5.png" alt="Kubota Promotion" />
-								<div class="slide-caption">KUBOTA PROMOTION</div>
 							</div>
 						</div>
 						<div class="slide">
 							<div class="slide-inner">
 								<img src="images/Promotions_6.png" alt="Mementos" />
-								<div class="slide-caption">MEMENTOS</div>
 							</div>
 						</div>
 						<div class="slide">
 							<div class="slide-inner">
 								<img src="images/Promotions_7.png" alt="Mementos" />
-								<div class="slide-caption">MEMENTOS</div>
 							</div>
 						</div>
 						<div class="slide">
 							<div class="slide-inner">
 								<img src="images/Promotions_8.png" alt="Mementos" />
-								<div class="slide-caption">MEMENTOS</div>
 							</div>
 						</div>
 						<div class="slide">
 							<div class="slide-inner">
 								<img src="images/Promotions_9.png" alt="Mementos" />
-								<div class="slide-caption">MEMENTOS</div>
 							</div>
 						</div>
 						<div class="slide">
 							<div class="slide-inner">
 								<img src="images/Promotions_10.png" alt="Mementos" />
-								<div class="slide-caption">MEMENTOS</div>
 							</div>
 						</div>
 						<div class="slide">
 							<div class="slide-inner">
 								<img src="images/Promotions_11.png" alt="Mementos" />
-								<div class="slide-caption">MEMENTOS</div>
 							</div>
 						</div>
 						<div class="slide">
 							<div class="slide-inner">
 								<img src="images/Promotions_12.png" alt="Mementos" />
-								<div class="slide-caption">MEMENTOS</div>
 							</div>
 						</div>
 						<div class="slide">
 							<div class="slide-inner">
 								<img src="images/Promotions_13.png" alt="Mementos" />
-								<div class="slide-caption">MEMENTOS</div>
 							</div>
 						</div>
 						<div class="slide">
 							<div class="slide-inner">
 								<img src="images/Promotions_14.png" alt="Mementos" />
-								<div class="slide-caption">MEMENTOS</div>
 							</div>
 						</div>
 						<div class="slide">
 							<div class="slide-inner">
 								<img src="images/Promotions_15.png" alt="Mementos" />
-								<div class="slide-caption">MEMENTOS</div>
 							</div>
 						</div>
 						<div class="slide">
 							<div class="slide-inner">
 								<img src="images/Promotions_16.png" alt="Mementos" />
-								<div class="slide-caption">MEMENTOS</div>
 							</div>
 						</div>
 						<div class="slide">
 							<div class="slide-inner">
 								<img src="images/Promotions_17.png" alt="Mementos" />
-								<div class="slide-caption">MEMENTOS</div>
 							</div>
 						</div>
 						<div class="slide">
 							<div class="slide-inner">
 								<img src="images/Promotions_18.png" alt="Mementos" />
-								<div class="slide-caption">MEMENTOS</div>
 							</div>
 						</div>
 						<div class="slide">
 							<div class="slide-inner">
 								<img src="images/Promotions_19.png" alt="Mementos" />
-								<div class="slide-caption">MEMENTOS</div>
 							</div>
 						</div>
 						<div class="slide">
 							<div class="slide-inner">
 								<img src="images/Promotions_20.png" alt="Mementos" />
-								<div class="slide-caption">MEMENTOS</div>
 							</div>
 						</div>
 						<div class="slide">
 							<div class="slide-inner">
 								<img src="images/Promotions_21.png" alt="Mementos" />
-								<div class="slide-caption">MEMENTOS</div>
 							</div>
 						</div>
 						<div class="slide">
 							<div class="slide-inner">
 								<img src="images/Promotions_22.png" alt="Mementos" />
-								<div class="slide-caption">MEMENTOS</div>
 							</div>
 						</div>
 						<div class="slide">
 							<div class="slide-inner">
 								<img src="images/Promotions_23.png" alt="Mementos" />
-								<div class="slide-caption">MEMENTOS</div>
 							</div>
 						</div>
 						<div class="slide">
 							<div class="slide-inner">
 								<img src="images/Promotions_24.png" alt="Mementos" />
-								<div class="slide-caption">MEMENTOS</div>
 							</div>
 						</div>
 						<div class="slide">
 							<div class="slide-inner">
 								<img src="images/Promotions_25.png" alt="Mementos" />
-								<div class="slide-caption">MEMENTOS</div>
 							</div>
 						</div>
 						<div class="slide">
 							<div class="slide-inner">
 								<img src="images/Promotions_26.png" alt="Mementos" />
-								<div class="slide-caption">MEMENTOS</div>
 							</div>
 						</div>
 						<div class="slide">
 							<div class="slide-inner">
 								<img src="images/Promotions_27.png" alt="Mementos" />
-								<div class="slide-caption">MEMENTOS</div>
 							</div>
 						</div>
 						<div class="slide">
 							<div class="slide-inner">
 								<img src="images/Promotions_28.png" alt="Mementos" />
-								<div class="slide-caption">MEMENTOS</div>
 							</div>
 						</div>
 						<div class="slide">
 							<div class="slide-inner">
 								<img src="images/Promotions_29.png" alt="Mementos" />
-								<div class="slide-caption">MEMENTOS</div>
 							</div>
 						</div>
 						<div class="slide">
 							<div class="slide-inner">
 								<img src="images/Promotions_30.png" alt="Mementos" />
-								<div class="slide-caption">MEMENTOS</div>
 							</div>
 						</div>
 						<div class="slide">
 							<div class="slide-inner">
 								<img src="images/Promotions_31.png" alt="Mementos" />
-								<div class="slide-caption">MEMENTOS</div>
 							</div>
 						</div>
 					</div>
@@ -1790,7 +1828,7 @@
 							<div class="detail-label">Sales Contacts</div>
 							<div class="detail-content">
 								<a href="tel:+919438644669">+91-943 864 4669</a><br />
-								<a href="tel:+919861011511">+91-986 101 1511</a>
+								<a href="tel:+917682811511">+91-768 281 1511</a>
 							</div>
 						</div>
 
@@ -1841,9 +1879,9 @@
 
 		<!-- Footer -->
 		<footer>
-			<div class="footer-logo">SUBHASHREE COMMUNICATION</div>
+			<div class="footer-logo">SUBHASHREE COMMUNICATIONS</div>
 			<p class="footer-text">
-				&copy; 2026 Subhashree Communication. All rights reserved. |
+				&copy; 2026 SUBHASHREE COMMUNICATIONS. All rights reserved. |
 				Bhubaneswar, Odisha, India
 			</p>
 		</footer>
