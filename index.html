@@ -252,7 +252,9 @@
 				border-radius: 30px;
 				backdrop-filter: blur(6px);
 				box-sizing: border-box;
-				transition: background 0.3s ease, border-color 0.3s ease;
+				transition:
+					background 0.3s ease,
+					border-color 0.3s ease;
 			}
 
 			.badge-3m:hover {
@@ -265,7 +267,7 @@
 				border-radius: 8px;
 				overflow: hidden;
 				line-height: 0;
-				box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+				box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 			}
 
 			.badge-3m-text {
@@ -1286,12 +1288,427 @@
 					padding: 0 40px;
 				}
 			}
+
+			/* ── Mobile fixes ─────────────────────────────────────────── */
+			@media (max-width: 768px) {
+				/* Nav: keep everything on one line without overflow */
+				nav {
+					padding: 0.9rem 4%;
+				}
+
+				.logo {
+					gap: 0.6rem;
+					min-width: 0;
+					flex: 1;
+					overflow: hidden;
+				}
+
+				.logo img {
+					height: 38px;
+					flex-shrink: 0;
+				}
+
+				.logo-text {
+					font-size: 0.95rem;
+					letter-spacing: 1px;
+					white-space: nowrap;
+					overflow: hidden;
+					text-overflow: ellipsis;
+				}
+
+				.nav-contact {
+					flex-shrink: 0;
+					gap: 0.6rem;
+				}
+
+				/* Sections: more breathing room on small screens */
+				.about,
+				.services,
+				.clients,
+				.awards,
+				.contact,
+				.ourwork {
+					padding: 4rem 4%;
+				}
+
+				.hero {
+					padding: 5rem 4% 3rem;
+				}
+
+				/* About cards: less internal padding */
+				.about-card {
+					padding: 1.8rem;
+				}
+
+				/* Services category title */
+				.category-title {
+					font-size: 1.6rem;
+				}
+
+				/* Contact grid: single-column, tighter padding */
+				.contact-details {
+					padding: 2.5rem 1.8rem;
+				}
+
+				.contact-form {
+					padding: 2.5rem 1.8rem;
+				}
+
+				/* Long email: allow wrapping */
+				.detail-content,
+				.contact-item,
+				.detail-content a,
+				.contact-item a {
+					word-break: break-all;
+					overflow-wrap: break-word;
+				}
+
+				/* Section headers */
+				.section-header {
+					margin-bottom: 3rem;
+				}
+
+				/* Hero CTA buttons: full width */
+				.btn {
+					width: 100%;
+					text-align: center;
+				}
+
+				/* Philosophy items */
+				.philosophy-item {
+					font-size: 1.2rem;
+					padding: 0.6rem 1rem;
+				}
+
+				/* Footer */
+				footer {
+					padding: 2rem 4%;
+					word-break: break-word;
+				}
+
+				.footer-logo {
+					font-size: 1.4rem;
+				}
+
+				.footer-text {
+					font-size: 0.8rem;
+				}
+			}
+
+			@media (max-width: 480px) {
+				/* Nav: tightest viewport */
+				nav {
+					padding: 0.75rem 3.5%;
+				}
+
+				.logo-text {
+					font-size: 0.82rem;
+					letter-spacing: 0.5px;
+				}
+
+				.logo img {
+					height: 32px;
+				}
+
+				/* Sections */
+				.about,
+				.services,
+				.clients,
+				.awards,
+				.contact,
+				.ourwork {
+					padding: 3rem 3.5%;
+				}
+
+				.hero {
+					padding: 4.5rem 3.5% 2.5rem;
+				}
+
+				/* Section title */
+				.section-title {
+					font-size: 2rem;
+					letter-spacing: 1px;
+				}
+
+				/* Hero h1 */
+				.hero h1 {
+					font-size: 2.2rem;
+				}
+
+				.hero h1 .highlight {
+					font-size: 2.6rem;
+				}
+
+				/* Hero tagline */
+				.hero-tagline {
+					font-size: 1.2rem;
+				}
+
+				/* Category title */
+				.category-title {
+					font-size: 1.3rem;
+					letter-spacing: 1px;
+				}
+
+				/* Category icon */
+				.category-icon {
+					width: 46px;
+					height: 46px;
+					font-size: 1.5rem;
+					flex-shrink: 0;
+				}
+
+				/* About card */
+				.about-card {
+					padding: 1.5rem;
+				}
+
+				.about-card h3 {
+					font-size: 1.5rem;
+				}
+
+				/* Contact */
+				.contact-details {
+					padding: 2rem 1.4rem;
+				}
+
+				.contact-form {
+					padding: 2rem 1.4rem;
+				}
+
+				.contact-details h3 {
+					font-size: 1.8rem;
+				}
+
+				/* Awards */
+				.award-icon {
+					font-size: 3.5rem;
+				}
+
+				.award-text {
+					font-size: 1.1rem;
+				}
+
+				/* Client logos */
+				.client-logo {
+					font-size: 1.3rem;
+					height: 90px;
+					padding: 1.2rem;
+				}
+
+				/* Service item */
+				.service-item {
+					padding: 1.4rem;
+				}
+
+				/* CTA gap */
+				.hero-cta {
+					gap: 1rem;
+				}
+
+				/* Commitment quote */
+				.commitment-quote {
+					font-size: 0.92rem;
+					padding: 1.2rem;
+				}
+			}
+			/* ─────────────────────────────────────────────────────────── */
+
+			/* Our Presence Section */
+			.presence {
+				padding: 8rem 5%;
+				background: var(--primary);
+				position: relative;
+				overflow: hidden;
+			}
+
+			.presence::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 60%;
+				height: 100%;
+				background: radial-gradient(
+					circle at 20% 50%,
+					rgba(43, 118, 187, 0.18) 0%,
+					transparent 65%
+				);
+				pointer-events: none;
+			}
+
+			.presence .section-container {
+				position: relative;
+				z-index: 2;
+			}
+
+			.presence .section-label {
+				color: var(--accent-secondary);
+			}
+
+			.presence .section-title {
+				color: var(--text-light);
+			}
+
+			.presence .section-description {
+				color: rgba(255, 255, 255, 0.8);
+			}
+
+			.presence-layout {
+				display: grid;
+				grid-template-columns: 1fr 340px;
+				gap: 4rem;
+				align-items: start;
+				margin-top: 4rem;
+			}
+
+			.presence-map-wrap {
+				background: rgba(255, 255, 255, 0.04);
+				border: 1px solid rgba(43, 118, 187, 0.25);
+				border-radius: 16px;
+				padding: 2rem;
+				position: relative;
+			}
+
+			#map {
+				width: 100%;
+			}
+
+			.presence-sidebar {
+				display: flex;
+				flex-direction: column;
+				gap: 1.5rem;
+			}
+
+			.presence-stat {
+				background: rgba(255, 255, 255, 0.05);
+				border: 1px solid rgba(43, 118, 187, 0.3);
+				border-radius: 12px;
+				padding: 1.8rem 2rem;
+				transition: all 0.3s ease;
+			}
+
+			.presence-stat:hover {
+				background: rgba(43, 118, 187, 0.12);
+				border-color: var(--accent-secondary);
+				transform: translateX(-5px);
+			}
+
+			.presence-stat-number {
+				font-family: "Bebas Neue", sans-serif;
+				font-size: 3.5rem;
+				line-height: 1;
+				color: var(--accent-secondary);
+				letter-spacing: 2px;
+			}
+
+			.presence-stat-label {
+				font-size: 0.9rem;
+				text-transform: uppercase;
+				letter-spacing: 2px;
+				color: rgba(255, 255, 255, 0.6);
+				margin-top: 0.4rem;
+			}
+
+			.presence-legend {
+				background: rgba(255, 255, 255, 0.05);
+				border: 1px solid rgba(43, 118, 187, 0.3);
+				border-radius: 12px;
+				padding: 1.8rem 2rem;
+			}
+
+			.presence-legend-title {
+				font-family: "Bebas Neue", sans-serif;
+				font-size: 1.1rem;
+				letter-spacing: 2px;
+				color: var(--accent-secondary);
+				margin-bottom: 1rem;
+			}
+
+			.legend-item {
+				display: flex;
+				align-items: center;
+				gap: 0.8rem;
+				margin-bottom: 0.7rem;
+				font-size: 0.9rem;
+				color: rgba(255, 255, 255, 0.75);
+			}
+
+			.legend-dot {
+				width: 14px;
+				height: 14px;
+				border-radius: 3px;
+				flex-shrink: 0;
+			}
+
+			.legend-dot-active {
+				background: #418cd8;
+			}
+
+			.legend-dot-inactive {
+				background: rgba(255, 255, 255, 0.15);
+				border: 1px solid rgba(255, 255, 255, 0.25);
+			}
+
+			.presence-states-list {
+				background: rgba(255, 255, 255, 0.05);
+				border: 1px solid rgba(43, 118, 187, 0.3);
+				border-radius: 12px;
+				padding: 1.8rem 2rem;
+			}
+
+			.presence-states-title {
+				font-family: "Bebas Neue", sans-serif;
+				font-size: 1.1rem;
+				letter-spacing: 2px;
+				color: var(--accent-secondary);
+				margin-bottom: 1rem;
+			}
+
+			.states-tags {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.5rem;
+			}
+
+			.state-tag {
+				background: rgba(65, 140, 216, 0.15);
+				border: 1px solid rgba(65, 140, 216, 0.35);
+				border-radius: 20px;
+				padding: 0.3rem 0.85rem;
+				font-size: 0.78rem;
+				color: rgba(255, 255, 255, 0.8);
+				letter-spacing: 0.5px;
+			}
+
+			@media (max-width: 1024px) {
+				.presence-layout {
+					grid-template-columns: 1fr;
+					gap: 3rem;
+				}
+				.presence-sidebar {
+					display: grid;
+					grid-template-columns: repeat(2, 1fr);
+					gap: 1.2rem;
+				}
+			}
+
+			@media (max-width: 768px) {
+				.presence {
+					padding: 4rem 4%;
+				}
+				.presence-sidebar {
+					grid-template-columns: 1fr;
+				}
+			}
 		</style>
 		<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 		<script>
 			// ⚠️ Replace with your actual EmailJS Public Key
 			emailjs.init("5akFB3u8hTWUS55od");
 		</script>
+		<script src="mapdata.js"></script>
+		<script src="countrymap.js"></script>
 	</head>
 	<body>
 		<!-- Navigation -->
@@ -1306,6 +1723,7 @@
 					<li><a href="#about">About</a></li>
 					<li><a href="#services">Services</a></li>
 					<li><a href="#clients">Clients</a></li>
+					<li><a href="#presence">Our Presence</a></li>
 					<li><a href="#contact">Contact</a></li>
 				</ul>
 				<div class="nav-contact">
@@ -1332,6 +1750,7 @@
 			<a href="#about" class="mobile-nav-link">About</a>
 			<a href="#services" class="mobile-nav-link">Services</a>
 			<a href="#clients" class="mobile-nav-link">Clients</a>
+			<a href="#presence" class="mobile-nav-link">Our Presence</a>
 			<a href="#contact" class="mobile-nav-link">Contact</a>
 		</div>
 
@@ -1340,36 +1759,42 @@
 			<div class="hero-pattern"></div>
 			<div class="hero-content">
 				<div class="hero-badges">
-				<div class="hero-badge">🏆 Award-Winning Advertising Agency</div>
-				<div class="badge-3m">
+					<div class="hero-badge">🏆 Award-Winning Advertising Agency</div>
+					<div class="badge-3m">
 						<!-- 3M Logo SVG -->
 						<div class="badge-3m-logo">
-							<svg width="44" height="28" viewBox="0 0 48 32" xmlns="http://www.w3.org/2000/svg">
-								<rect width="48" height="32" rx="5" fill="#FF0000"/>
+							<svg
+								width="44"
+								height="28"
+								viewBox="0 0 48 32"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<rect width="48" height="32" rx="5" fill="#FF0000" />
 								<text
-									x="24" y="23"
+									x="24"
+									y="23"
 									font-family="Arial Black, Arial, sans-serif"
 									font-weight="900"
 									font-size="20"
 									fill="#ffffff"
 									text-anchor="middle"
 									letter-spacing="-0.5"
-								>3M</text>
+								>
+									3M
+								</text>
 							</svg>
 						</div>
 						<div class="badge-3m-text">
 							<span class="label-top">Authorized</span>
 							<span class="label-main">Converter</span>
 						</div>
-				</div>
+					</div>
 				</div>
 				<h1>
 					<span class="highlight">BRANDS</span>
 					THAT CREATE IMPACT
 				</h1>
-				<p class="hero-tagline">
-					"A Complete Advertising Solution"
-				</p>
+				<p class="hero-tagline">"A Complete Advertising Solution"</p>
 
 				<div class="hero-philosophy">
 					<div class="philosophy-item">SIMPLE</div>
@@ -1393,7 +1818,11 @@
 						</div>
 						<div class="contact-item">
 							✉️
-							<a href="https://mail.google.com/mail/?view=cm&to=subhashreecommunication@gmail.com" target="_blank">subhashreecommunication@gmail.com</a>
+							<a
+								href="https://mail.google.com/mail/?view=cm&to=subhashreecommunication@gmail.com"
+								target="_blank"
+								>subhashreecommunication@gmail.com</a
+							>
 						</div>
 					</div>
 				</div>
@@ -1623,7 +2052,13 @@
 					<div class="client-logo" style="font-size: 1.7rem">
 						AU SMALL FINANCE BANK
 					</div>
-					<div class="client-logo" >IDFC BANK</div>
+					<div class="client-logo">
+						PARLE
+					</div>
+					<div class="client-logo">
+						TATA TISCON
+					</div>
+					<div class="client-logo">IDFC BANK</div>
 				</div>
 			</div>
 		</section>
@@ -1845,6 +2280,61 @@
 			</div>
 		</section>
 
+		<!-- Our Presence Section -->
+		<section id="presence" class="presence">
+			<div class="section-container">
+				<div class="section-header">
+					<div class="section-label">Pan-India Reach</div>
+					<h2 class="section-title">OUR PRESENCE</h2>
+					<p class="section-description">
+						From the shores of Odisha to the metros of India — Subhashree
+						Communications operates across 15 states, delivering impactful
+						advertising solutions nationwide.
+					</p>
+				</div>
+
+				<div class="presence-layout">
+					<!-- Map -->
+					<div class="presence-map-wrap">
+						<div id="map"></div>
+					</div>
+
+					<!-- Sidebar -->
+					<div class="presence-sidebar">
+						<div class="presence-stat">
+							<div class="presence-stat-number">15</div>
+							<div class="presence-stat-label">States of Operation</div>
+						</div>
+						<div class="presence-stat">
+							<div class="presence-stat-number">500+</div>
+							<div class="presence-stat-label">Projects Delivered</div>
+						</div>
+						<div class="presence-states-list">
+							<div class="presence-states-title">Active States</div>
+							<div class="states-tags">
+								<span class="state-tag">Andhra Pradesh</span>
+								<span class="state-tag">Assam</span>
+								<span class="state-tag">Bihar</span>
+								<span class="state-tag">Chhattisgarh</span>
+								<span class="state-tag">Goa</span>
+								<span class="state-tag">Gujarat</span>
+								<span class="state-tag">Jharkhand</span>
+								<span class="state-tag">Karnataka</span>
+								<span class="state-tag">Madhya Pradesh</span>
+								<span class="state-tag">Maharashtra</span>
+								<span class="state-tag">Rajasthan</span>
+								<span class="state-tag">Odisha</span>
+								<span class="state-tag">Tamil Nadu</span>
+								<span class="state-tag">Telangana</span>
+								<span class="state-tag">West Bengal</span>
+								<span class="state-tag">Andaman &amp; Nicobar</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
 		<!-- Contact Section -->
 		<section id="contact" class="contact">
 			<div class="section-container">
@@ -1873,7 +2363,11 @@
 						<div class="detail-item">
 							<div class="detail-label">Email</div>
 							<div class="detail-content">
-								<a href="https://mail.google.com/mail/?view=cm&to=subhashreecommunication@gmail.com" target="_blank">subhashreecommunication@gmail.com</a>
+								<a
+									href="https://mail.google.com/mail/?view=cm&to=subhashreecommunication@gmail.com"
+									target="_blank"
+									>subhashreecommunication@gmail.com</a
+								>
 							</div>
 						</div>
 
@@ -1916,18 +2410,6 @@
 				Bhubaneswar, Odisha, India
 			</p>
 		</footer>
-		<script
-			data-cfasync="false"
-			src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
-		></script>
-		<script
-			data-cfasync="false"
-			src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
-		></script>
-		<script
-			data-cfasync="false"
-			src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
-		></script>
 		<script>
 			// Hamburger / Mobile nav
 			const hamburgerBtn = document.getElementById("hamburgerBtn");
@@ -2038,8 +2520,8 @@
 
 			// Replace the three placeholders below with your actual EmailJS values.
 			// Dashboard: https://dashboard.emailjs.com
-			const EMAILJS_SERVICE_ID = "YOUR_SERVICE_ID"; // e.g. 'service_abc123'
-			const EMAILJS_TEMPLATE_ID = "YOUR_TEMPLATE_ID"; // e.g. 'template_xyz789'
+			const EMAILJS_SERVICE_ID = "service_2jidhw7"; // e.g. 'service_abc123'
+			const EMAILJS_TEMPLATE_ID = "template_q7lfcg5"; // e.g. 'template_xyz789'
 			// (Public Key is already set in emailjs.init() above)
 			// ─────────────────────────────────────────────────────────────────────
 

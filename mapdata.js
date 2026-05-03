@@ -16,14 +16,14 @@ var simplemaps_countrymap_mapdata = {
     all_states_zoomable: "yes",
 
     //Location defaults
-    location_description: "Location description",
+    location_description: "",
     location_url: "",
-    location_color: "#FF0067",
+    location_color: "#ffffff",
     location_opacity: 0.8,
     location_hover_opacity: 1,
-    location_size: 25,
-    location_type: "square",
-    location_image_source: "frog.png",
+    location_size: 20,
+    location_type: "image",
+    location_image_source: "placeholder.png",
     location_border_color: "#FFFFFF",
     location_border: 2,
     location_hover_border: 2.5,
@@ -228,8 +228,9 @@ var simplemaps_countrymap_mapdata = {
     },
     INRJ: {
       name: "Rajasthan",
+      color: "#418cd8",
       zoomable: "no",
-      inactive: "yes"
+      hover_color: "#3B729F"
     },
     INSK: {
       name: "Sikkim",
@@ -270,7 +271,24 @@ var simplemaps_countrymap_mapdata = {
       hover_color: "#3B729F"
     }
   },
-  locations: {},
+  locations: {
+    "0": { name: "Andaman and Nicobar", lat: "11.7401", lng: "92.6586" },
+    "1": { name: "Andhra Pradesh", lat: "15.9129", lng: "79.7400" },
+    "2": { name: "Assam", lat: "26.2006", lng: "92.9376" },
+    "3": { name: "Bihar", lat: "25.0961", lng: "85.3131" },
+    "4": { name: "Chhattisgarh", lat: "21.2787", lng: "81.8661" },
+    "5": { name: "Goa", lat: "15.2993", lng: "74.1240" },
+    "6": { name: "Gujarat", lat: "22.2587", lng: "71.1924" },
+    "7": { name: "Jharkhand", lat: "23.6102", lng: "85.2799" },
+    "8": { name: "Karnataka", lat: "15.3173", lng: "75.7139" },
+    "9": { name: "Maharashtra", lat: "19.7515", lng: "75.7139" },
+    "10": { name: "Madhya Pradesh", lat: "23.4733", lng: "77.9470" },
+    "11": { name: "Orissa", lat: "20.9517", lng: "85.0985" },
+    "12": { name: "Telangana", lat: "18.1124", lng: "79.0193" },
+    "13": { name: "Tamil Nadu", lat: "11.1271", lng: "78.6569" },
+    "14": { name: "West Bengal", lat: "22.9868", lng: "87.8550" },
+    "15": { name: "Rajasthan", lat: "26.9124", lng: "75.7873" }
+  },
   labels: {
     INAN: {
       name: "Andaman and Nicobar",
